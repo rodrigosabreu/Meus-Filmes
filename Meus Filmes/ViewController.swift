@@ -17,10 +17,34 @@ class ViewController: UITableViewController {
         
         var filme: Filme
         
-        filme = Filme(titulo: "Filme 1", descricao: "descricao 1")
+        filme = Filme(titulo:"007 - Spectre", descricao: "descricao 1", imagem: #imageLiteral(resourceName: "filme1"))
         filmes.append( filme )
         
-        filme = Filme(titulo: "Filme 2", descricao: "descricao 2")
+        filme = Filme(titulo:"Star Wars", descricao: "descricao 2", imagem: #imageLiteral(resourceName: "filme2"))
+        filmes.append( filme )
+        
+        filme = Filme(titulo:"Impacto Mortal", descricao: "descricao 3", imagem: #imageLiteral(resourceName: "filme3"))
+        filmes.append( filme )
+        
+        filme = Filme(titulo:"Deadpool", descricao: "descricao 4", imagem: #imageLiteral(resourceName: "filme4"))
+        filmes.append( filme )
+        
+        filme = Filme(titulo:"O Regresso", descricao: "descricao 5", imagem: #imageLiteral(resourceName: "filme5"))
+        filmes.append( filme )
+        
+        filme = Filme(titulo:"A Herdeira", descricao: "descricao 6", imagem: #imageLiteral(resourceName: "filme6"))
+        filmes.append( filme )
+        
+        filme = Filme(titulo:"Caçadores de emoção", descricao: "descricao 7", imagem: #imageLiteral(resourceName: "filme7"))
+        filmes.append( filme )
+        
+        filme = Filme(titulo:"Regresso do mal", descricao: "descricao 8", imagem: #imageLiteral(resourceName: "filme8"))
+        filmes.append( filme )
+        
+        filme = Filme(titulo:"Tarzan", descricao: "descricao 9", imagem: #imageLiteral(resourceName: "filme9"))
+        filmes.append( filme )
+        
+        filme = Filme(titulo:"Filme 9", descricao: "descricao 10", imagem: #imageLiteral(resourceName: "filme10"))
         filmes.append( filme )
     }
 
@@ -39,6 +63,7 @@ class ViewController: UITableViewController {
         
         let celula = tableView.dequeueReusableCell(withIdentifier: celulaReuso, for: indexPath)
         celula.textLabel?.text = filme.titulo
+        celula.imageView?.image = filme.imagem
         
         return celula
         
