@@ -72,6 +72,10 @@ class ViewController: UITableViewController {
         celula.tituloLabel.text = filme.titulo
         celula.descricaoLabel.text = filme.descricao
         
+        //arredondando imagens via programacao, e tem a maneira grafica
+        /*celula.filmeImagemView.layer.cornerRadius = 42
+        celula.filmeImagemView.clipsToBounds = true*/
+        
         return celula
         
     }
