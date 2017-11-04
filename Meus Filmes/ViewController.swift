@@ -61,9 +61,16 @@ class ViewController: UITableViewController {
         let filme: Filme = filmes[ indexPath.row ]
         let celulaReuso = "celulaReuso"
         
-        let celula = tableView.dequeueReusableCell(withIdentifier: celulaReuso, for: indexPath)
+        //celula de reuso nao customizada
+        /*let celula = tableView.dequeueReusableCell(withIdentifier: celulaReuso, for: indexPath)
         celula.textLabel?.text = filme.titulo
-        celula.imageView?.image = filme.imagem
+        celula.imageView?.image = filme.imagem*/
+        
+        //celula de reuso customizada
+        let celula = tableView.dequeueReusableCell(withIdentifier: celulaReuso, for: indexPath) as! FilmeCelula
+        celula.filmeImagemView.image = filme.imagem
+        celula.tituloLabel.text = filme.titulo
+        celula.descricaoLabel.text = filme.descricao
         
         return celula
         
